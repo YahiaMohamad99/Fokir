@@ -135,13 +135,39 @@ transition: all 0.5s;
   border-radius: 5px;
   float: left;
   margin-right: 80px;
+  position: relative;
 }
+
 .hello img {
   border-radius: 5px;
   position: relative;
   top: 20px;
   left: 20px;
 }
+.hello-layer{
+  text-align: center;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  bottom: -15px;
+  right: 0;
+  left: 20px;
+  z-index: 0;
+  transition: all 0.5s;
+
+}.hello .img:hover .hello-layer{
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+.hello-layer li{
+  margin-top: 50%;
+  display: inline-block;
+  color: var(--main-color);
+  padding: 10px;
+}
+
+
 .hello-text {
   padding: 5px;
   width: 50%;
@@ -194,6 +220,7 @@ transition: all 0.5s;
   background-color: var(--main-background-color);
 }
 
+
 .service h2 {
 
   margin: 20px 0;
@@ -238,6 +265,7 @@ transition: all 0.5s;
   padding: 20px ;
 
 }
+
 .service-content h3 {
   margin: 15px;
   color: #333;
@@ -269,10 +297,34 @@ transition: all 0.5s;
 }
 
 .portofolio .port {
+  position: relative;
   float: left;
-  width: calc(100% / 3);
-  padding: 10px;
+  width: 30%;
+  margin: 10px;
+  
 }
+.portofolio .port .port-layer{
+  background-color:white;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+  transition: all 0.9s;
+  z-index: -1;
+}
+.portofolio .port:hover .port-layer{
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.portofolio .port .port-layer i {
+  color: var(--main-color);
+  position: relative;
+  top: 190px;
+  left: 100px;
+}
+
+
 .portofolio ul {
 
   width: 50%;
