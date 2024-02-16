@@ -145,20 +145,30 @@ transition: all 0.5s;
   left: 20px;
 }
 .hello-layer{
+  border-radius: 5px;
+  overflow: hidden;
   text-align: center;
-  background-color: transparent;
   position: absolute;
+  z-index: 3;
   width: 100%;
-  top: 20px;
+  top:calc(100% + 20px);
   bottom: -15px;
-  right: 0;
   left: 20px;
-  z-index: 0;
-  transition: all 0.5s;
+  transition: all 1s;
 
-}.hello .img:hover .hello-layer{
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 6;
+}
+.hello .hello-layer i{
+  color: white  ;
+  transition: all 0.5s;
+}
+.hello .hello-layer i:hover{
+  color: var(--main-color);
+}
+.hello .img:hover .hello-layer{
+  background-color: rgba(0, 0, 0, 0.4); 
+  top:calc(0% + 20px) ;
+ 
+
 }
 .hello-layer li{
   margin-top: 50%;
